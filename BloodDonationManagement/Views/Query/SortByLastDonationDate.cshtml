@@ -1,0 +1,26 @@
+﻿@model IEnumerable<BloodDonationManagement.Models.Donation>
+
+<h1>Latest Donations</h1>
+
+<table border="1">
+
+    <tr>
+        <th>Donation ID</th>
+        <th>Donor ID</th>
+        <th>Donation Date</th>
+        <th>Volume (mL)</th>
+        <th>Camp Name</th>
+    </tr>
+
+    @foreach (var donation in Model)
+    {
+        <tr>
+            <td>@donation.DonationId</td>
+            <td>@donation.DonorId</td>
+            <td>@donation.DonationDate</td>
+            <td>@donation.VolumeMl</td>
+            <td>@donation.CampName</td>
+        </tr>
+    }
+
+</table>

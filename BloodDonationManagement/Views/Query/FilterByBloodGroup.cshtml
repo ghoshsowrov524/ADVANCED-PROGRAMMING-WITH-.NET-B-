@@ -1,0 +1,24 @@
+﻿@model IEnumerable<BloodDonationManagement.Models.Donor>
+
+<h1>Filter By Blood Group</h1>
+
+<table border="1">
+
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Blood Group</th>
+        <th>Phone</th>
+    </tr>
+
+    @foreach (var donor in Model)
+    {
+        <tr>
+            <td>@donor.DonorId</td>
+            <td>@donor.Name</td>
+            <td>@donor.BloodGroup</td>
+            <td>@donor.Phone</td>
+        </tr>
+    }
+
+</table>
